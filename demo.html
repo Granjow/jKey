@@ -1,0 +1,21 @@
+<html>
+    <head>Bug demo</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script src="jquery.jkey.js"></script>
+    <script type="text/javascript">
+        $(document).ready( function() {
+            var log = $('#log');
+            $(document).jkey('shift+alt+t', function() {
+                log.append('<p>Shift+Alt+T pressed</p>');
+                alert('Random message! Release of Shift and Alt are blocked now.');
+            });
+            $(document).jkey('t', function() {
+                log.append('<p>T pressed</p>');
+            });
+        });
+    </script>
+    <body>
+        <p>Press Shift+Alt+T or T.</p>
+        <div id="log"></div>
+    </body>
+</html>
